@@ -1,0 +1,90 @@
+body {
+  margin: 0;
+  background: radial-gradient(circle at center, #0f0f1f, #000);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  color: #b84cff;
+  font-family: 'Press Start 2P', cursive; /* Fonte pixel arcade */
+}
+
+canvas {
+  border: 2px solid #b84cff;
+  box-shadow: 0 0 20px #b84cff;
+}
+
+#menu, #gameOver {
+  text-align: center;
+}
+
+#menu h1, #gameOver h1 {
+  font-size: 40px;
+  color: #b84cff;
+  text-shadow: 0 0 20px #00ffff;
+  margin-bottom: 20px;
+}
+
+button {
+  background: linear-gradient(135deg, #b84cff, #00ffff);
+  border: none;
+  border-radius: 12px;
+  color: #111;
+  padding: 14px 28px;
+  margin: 12px;
+  font-size: 16px;
+  font-family: 'Press Start 2P', cursive;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 15px #b84cff, 0 0 30px #00ffff;
+}
+
+button:hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 25px #b84cff, 0 0 50px #00ffff, 0 0 80px #ff00ff;
+  background: linear-gradient(135deg, #00ffff, #b84cff);
+  color: #000;
+}
+
+
+#hud {
+  margin-top: 10px;
+  color: #b84cff;
+  text-shadow: 0 0 10px #00ffff;
+  font-size: 14px;
+}
+
+#menu h1, #gameOver h1 {
+  font-size: 60px;
+  font-family: 'Press Start 2P', cursive;
+  color: #b84cff;
+  text-shadow: 0 0 10px #b84cff, 0 0 20px #00ffff, 0 0 40px #ff00ff;
+  position: relative;
+  animation: glowMove 3s infinite linear;
+}
+
+/* Efeito de LED se movendo */
+@keyframes glowMove {
+  0% {
+    text-shadow: 0 0 10px #b84cff, 0 0 20px #00ffff, 0 0 40px #ff00ff;
+    color: #b84cff;
+  }
+  25% {
+    text-shadow: 0 0 15px #00ffff, 0 0 30px #b84cff, 0 0 50px #ff00ff;
+    color: #00ffff;
+  }
+  50% {
+    text-shadow: 0 0 20px #ff00ff, 0 0 40px #00ffff, 0 0 60px #b84cff;
+    color: #ff00ff;
+  }
+  75% {
+    text-shadow: 0 0 15px #00ffff, 0 0 30px #ff00ff, 0 0 50px #b84cff;
+    color: #00ffff;
+  }
+  100% {
+    text-shadow: 0 0 10px #b84cff, 0 0 20px #00ffff, 0 0 40px #ff00ff;
+    color: #b84cff;
+  }
+}
+

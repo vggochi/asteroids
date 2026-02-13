@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Asteroids</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Menu inicial -->
+  <div id="menu">
+    <h1>ASTEROIDS</h1>
+    <button onclick="startGame('facil')">Fácil</button>
+    <button onclick="startGame('medio')">Médio</button>
+    <button onclick="startGame('dificil')">Difícil</button>
+  </div>
+
+  <!-- Canvas do jogo -->
+  <canvas id="gameCanvas" style="display:none;"></canvas>
+
+  <!-- HUD -->
+  <div id="hud" style="display:none;">
+    <p>Pontos: <span id="score">0</span></p>
+    <p>Vidas: <span id="lives">3</span></p>
+  </div>
+
+  <!-- Tela de Game Over -->
+  <div id="gameOver" style="display:none;">
+    <h1>GAME OVER</h1>
+    <p>Sua pontuação: <span id="finalScore">0</span></p>
+    <button onclick="retryGame()">Tente novamente</button>
+    <button onclick="goToMenu()">Voltar ao início</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
